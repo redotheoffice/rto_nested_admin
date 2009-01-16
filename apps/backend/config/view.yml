@@ -1,0 +1,22 @@
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    #title:        symfony project
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+
+  stylesheets:
+    - jQuery.treeTable.css
+    - main.css
+
+  javascripts:
+    - http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js
+    - http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.3/jquery-ui.min.js
+    - jquery.treeTable.js
+
+  has_layout:     on
+  layout:         layout

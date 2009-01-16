@@ -1,0 +1,34 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Tree
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          tree
+    with_doctrine_route:     1
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        max_per_page: 999999
+        batch_actions:
+          order:
+            label: Update the tree order
+          _delete: ~
+        object_actions:
+          new:
+            label: Add Child
+          _edit:    ~
+          _delete:  ~
+        actions:
+          _new:
+            label: Add Root
+      filter:
+        class: false
+      form:    ~
+      edit:    ~
+      new:     ~

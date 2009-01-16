@@ -1,0 +1,25 @@
+dev:
+  propel:
+    param:
+      classname: DebugPDO
+test:
+  propel:
+    class: sfDoctrineDatabase
+    param:
+      classname: DebugPDO
+      dsn:          sqlite:///<?php echo dirname(__FILE__); ?>/../log/sqlitetest.db
+#      dsn: 'mysql:host=localhost;dbname=sandbox_nested'
+#      username: root
+#      password: root
+all:
+  propel:
+    class: sfDoctrineDatabase
+    param:
+      classname: PropelPDO
+      dsn:          sqlite:///<?php echo dirname(__FILE__); ?>/../log/sqlitetest.db
+#      dsn: 'mysql:host=localhost;dbname=sandbox_nested'
+#      username: root
+#      password: root
+#      encoding: utf8
+#      persistent: true
+#      pooling: true

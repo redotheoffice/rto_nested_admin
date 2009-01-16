@@ -1,0 +1,21 @@
+    # Be sure to only have this line once in your configuration
+    NameVirtualHost 127.0.0.1:80
+
+    # This is the configuration for NestedAdmin
+    Listen 127.0.0.1:80
+
+    <VirtualHost 127.0.0.1:80>
+      ServerName NestedAdmin.localhost
+      DocumentRoot "/Users/sjoerd/symfony/nested/web"
+      DirectoryIndex index.php
+      <Directory "/Users/sjoerd/symfony/nested/web">
+        AllowOverride All
+        Allow from All
+      </Directory>
+
+      Alias /sf "/Users/sjoerd/symfony/lib/symfony/1.2/data/web/sf"
+      <Directory "/Users/sjoerd/symfony/lib/symfony/1.2/data/web/sf">
+        AllowOverride All
+        Allow from All
+      </Directory>
+    </VirtualHost>

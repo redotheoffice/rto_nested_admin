@@ -1,0 +1,20 @@
+tree:
+  class: sfDoctrineRouteCollection
+  options:
+    model:               Tree
+    module:              tree
+    prefix_path:         tree
+    column:              id
+    with_wildcard_routes: true
+
+# default rules
+homepage:
+  url:   /
+  param: { module: tree, action: index }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
