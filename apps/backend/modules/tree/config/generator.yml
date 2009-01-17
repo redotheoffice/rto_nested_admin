@@ -17,7 +17,7 @@ generator:
         max_per_page: 999999
         batch_actions:
           order:
-            label: Update the tree order
+            label: Update tree order
           _delete: ~
         object_actions:
           new:
